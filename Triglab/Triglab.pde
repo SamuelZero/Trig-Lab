@@ -22,6 +22,6 @@ void draw() {
   ellipse(width/2, height/2, 300, 300);
 // Earth
   fill(0,0,255);
-  ellipse(width/2 + 250*cos(radians(A)), height/2 + 250*sin(radians(A)), 50, 50);
+  image(earth, width/2 + 300*cos(radians(A)), height/2 + 300*sin(radians(A)), 100, 100);
   A++;
 }
