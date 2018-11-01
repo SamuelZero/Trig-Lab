@@ -7,6 +7,8 @@ float B = 100;
 float C = 200;
 float D = 300;
 float MOON = 0;
+float X;
+float Y;
 
 void setup() {
   size(900, 900);
@@ -26,7 +28,9 @@ void draw() {
   ellipse(width/2, height/2, 300, 300);
   imageMode(CENTER);
   // Earth
-  image(earth, width/2 + 300*cos(radians(A)), height/2 + 300*sin(radians(A)), 100, 100);
+  X = width/2 + 300*cos(radians(A));
+  Y = height/2 + 300*sin(radians(A));
+  image(earth, X, Y, 100, 100);
   A++;
   //second Earth
   image(earth, width/2 + 300*cos(radians(B)), height/2 + 300*sin(radians(B)), 100, 100);
@@ -39,6 +43,6 @@ void draw() {
   D++;
   //The MOON
   fill(175, 175, 175);
-  ellipse(width/2 + 300*cos(radians(A)) + 50*cos(radians(MOON)), height/2 + 300*cos(radians(A)) + 50*cos(radians(MOON)), 50, 50);
-  MOON++;
+  ellipse( X + 100*cos(radians(MOON)), Y + 100*sin(radians(MOON)), 50, 50);
+  MOON+=2;
 }
