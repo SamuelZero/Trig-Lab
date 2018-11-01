@@ -1,9 +1,12 @@
 //moon earth and sun lab
 //made by Drake 11/1/2018
 
+PImage earth; 
+
 void setup() {
   size(900, 900);
   background(0);
+  earth = loadImage("earth.jpg");
 }
  void draw(){
  //the sun
